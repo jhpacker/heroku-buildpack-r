@@ -71,10 +71,11 @@ then
   BUILD_PACK_VERSION=`read_var $BUILD_DIR/.r-buildpack-version`
   echo "NOTE: Using buildback version override [$BUILD_PACK_VERSION]" | indent
 else
-  BUILD_PACK_VERSION="20160720-0331"
+    #BUILD_PACK_VERSION="20160720-0331"
+    BUILD_PACK_VERSION="20170312-1820"
 fi
 
-S3_BUCKET="heroku-buildpack-r"
+S3_BUCKET="heroku-buildpack-dartistics-r"
 R_BINARIES="http://${S3_BUCKET}.s3.amazonaws.com/${STACK}/R-${R_VERSION}-binaries-${BUILD_PACK_VERSION}.tar.gz"
 
 # vendor R into the slug
